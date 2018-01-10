@@ -1,0 +1,32 @@
+inhducng@NMD-Blade-Stealth:~$ cd /bin
+minhducng@NMD-Blade-Stealth:/bin$ ls | grep list
+minhducng@NMD-Blade-Stealth:/bin$ 
+
+
+minhducng@NMD-Blade-Stealth:~$ cat /etc/passwd | wc -l
+40
+
+minhducng@NMD-Blade-Stealth:~$ free -h
+              total        used        free      shared  buff/cache   available
+Mem:           7,7G        1,2G        5,5G        387M        997M        5,9G
+Swap:            0B          0B          0B
+minhducng@NMD-Blade-Stealth:~$ free -h | grep Mem: | awk '{print $2}'
+7,7G
+minhducng@NMD-Blade-Stealth:~$ free -h | grep Mem: | awk '{print $0}'
+Mem:           7,7G        1,2G        5,5G        387M        997M        5,9G
+minhducng@NMD-Blade-Stealth:~$ free -h | grep Mem: | awk '{print $1}'
+Mem:
+
+
+minhducng@NMD-Blade-Stealth:~$ cat /proc/cpuinfo | grep 'cpu cores'
+cpu cores	: 2
+cpu cores	: 2
+cpu cores	: 2
+cpu cores	: 2
+minhducng@NMD-Blade-Stealth:~$ cat /proc/cpuinfo | grep 'cpu cores' | wc -l
+4
+
+minhducng@NMD-Blade-Stealth:~$ find /home/minhducng/Pictures/ -iname '*.png' | wc -l
+0
+
+
