@@ -1,0 +1,82 @@
+echo hello world
+hello world
+
+passwd
+Changing password for minhducng.
+(current) UNIX password: 
+
+date
+Thứ tư, 10 Tháng một năm 2018 05:55:08 ICT
+
+hostname
+NMD-Blade-Stealth
+
+arch
+x86_64
+
+uname -a
+Linux NMD-Blade-Stealth 4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+dmesg
+ax-sta 32 raw 0 hwcrypto 1
+[    6.182737] ath: EEPROM regdomain: 0x6c
+[    6.182738] ath: EEPROM indicates we should expect a direct regpair map
+[    6.182740] ath: Country alpha2 being used: 00
+[    6.182740] ath: Regpair used: 0x6c
+[    6.195410] ath10k_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[    6.236636] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[    6.296093] Bluetooth: RFCOMM TTY layer initialized
+[    6.296097] Bluetooth: RFCOMM socket layer initialized
+[    6.296101] Bluetooth: RFCOMM ver 1.11
+
+uptime
+06:00:37 up 17 min,  1 user,  load average: 0,47, 0,29, 0,21
+
+who am i
+
+whoami
+minhducng
+
+who
+minhducng tty7         2018-01-10 05:44 (:0)
+
+id
+uid=1000(minhducng) gid=1000(minhducng) groups=1000(minhducng),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+last
+minhducn tty7         :0               Wed Jan 10 05:44    gone - no logout
+reboot   system boot  4.10.0-28-generi Wed Jan 10 05:43   still running
+reboot   system boot  4.10.0-28-generi Fri Dec 22 04:50 - 04:50  (00:00)
+reboot   system boot  4.10.0-28-generi Fri Dec 22 04:49 - 04:50  (00:00)
+minhducn tty8         :1               Thu Dec 21 21:42 - crash  (07:07)
+guest-de tty7         :0               Fri Dec 22 04:40 - crash  (00:08)
+reboot   system boot  4.10.0-28-generi Fri Dec 22 04:39 - 04:50  (00:11)
+reboot   system boot  4.10.0-28-generi Fri Dec 22 00:42 - 04:50  (04:07)
+reboot   system boot  4.10.0-28-generi Thu Dec 21 00:54 - 00:56  (00:01)
+guest-qw tty7         :0               Tue Dec 12 23:13 - crash (8+01:41)
+reboot   system boot  4.10.0-28-generi Tue Dec 12 23:12 - 00:56 (8+01:44)
+reboot   system boot  4.10.0-28-generi Sat Dec  9 23:04 - 00:56 (11+01:52)
+guest-bp tty7         :0               Sat Dec  9 00:50 - 00:50  (00:00)
+reboot   system boot  4.10.0-28-generi Sat Dec  9 00:49 - 00:50  (00:01)
+minhducn tty7         :0               Thu Dec  7 04:29 - crash (1+20:20)
+reboot   system boot  4.10.0-28-generi Thu Dec  7 04:29 - 00:50 (1+20:21)
+minhducn tty7         :0               Wed Dec  6 15:48 - down   (-4:-14)
+reboot   system boot  4.10.0-28-generi Wed Dec  6 15:48 - 11:33  (-4:-14)
+minhducn tty7         :0               Wed Dec  6 23:45 - down   (-13:-39)
+reboot   system boot  4.10.0-28-generi Wed Dec  6 23:45 - 10:06  (-13:-39)
+
+wtmp begins Wed Dec  6 23:45:25 2017
+
+finger
+The program 'finger' is currently not installed. You can install it by typing:
+sudo apt install finger
+
+w
+ 06:03:52 up 20 min,  1 user,  load average: 0,61, 0,43, 0,28
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+minhducn tty7     :0               05:44   20:21  28.94s  0.10s /sbin/upstart -
+
+
+
+
+
