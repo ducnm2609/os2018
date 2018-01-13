@@ -1,0 +1,112 @@
+duc@duc-Blade-Stealth:~$ ps -ag
+  PID TTY      STAT   TIME COMMAND
+  773 tty1     Ssl+   0:00 /usr/lib/gdm3/gdm-wayland-session env GNOME_SHELL_SES
+  777 tty1     Sl+    0:00 /usr/lib/gnome-session/gnome-session-binary --session
+  858 tty1     Sl+    0:35 /usr/bin/gnome-shell
+  888 tty1     Sl+    0:03 /usr/bin/Xwayland :0 -rootless -noreset -listen 4 -li
+  936 tty1     Sl     0:00 ibus-daemon --xim --panel disable
+  942 tty1     Sl     0:00 /usr/lib/ibus/ibus-dconf
+  944 tty1     Sl     0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+  992 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+  993 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-power
+  996 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-print-notification
+ 1001 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ 1004 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ 1007 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ 1012 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ 1016 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ 1018 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ 1020 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ 1025 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-keyboard
+ 1027 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ 1029 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ 1033 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ 1034 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ 1036 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ 1037 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ 1042 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ 1057 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ 1110 tty1     Sl     0:00 /usr/lib/ibus/ibus-engine-simple
+ 1162 tty1     Sl+    0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ 1163 tty1     SLl+   0:00 /usr/bin/gnome-software --gapplication-service
+ 1169 tty1     S+     0:00 kerneloops-applet
+ 1393 tty1     Sl+    0:20 /usr/lib/firefox/firefox -new-window
+ 1524 tty1     Sl+    0:00 update-notifier
+ 1603 tty1     Sl+    0:14 /usr/lib/firefox/firefox -contentproc -childID 3 -isF
+ 1645 tty1     Sl+    0:00 /usr/lib/x86_64-linux-gnu/deja-dup/deja-dup-monitor
+ 1757 tty1     Sl+    0:01 gedit
+ 1795 pts/0    Ss     0:00 bash
+ 1808 pts/0    R+     0:00 ps -ag
+duc@duc-Blade-Stealth:~$ 
+duc@duc-Blade-Stealth:~$ nautilus &
+[1] 1809
+duc@duc-Blade-Stealth:~$ sleep 5
+Nautilus-Share-Message: Called "net usershare info" but it failed: Failed to execute child process “net” (No such file or directory)
+duc@duc-Blade-Stealth:~$ ps | grep nautilus
+ 1809 pts/0    00:00:00 nautilus
+duc@duc-Blade-Stealth:~$ 
+duc@duc-Blade-Stealth:~$ pid=$(pgrep nautilus | tail -1)
+duc@duc-Blade-Stealth:~$ echo $pid
+1809
+duc@duc-Blade-Stealth:~$ 
+duc@duc-Blade-Stealth:~$ cat /proc/$pid/status
+Name:	nautilus
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1809
+Ngid:	0
+Pid:	1809
+PPid:	1795
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 118 128 1000 
+NStgid:	1809
+NSpid:	1809
+NSpgid:	1809
+NSsid:	1795
+VmPeak:	  978460 kB
+VmSize:	  927284 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   59812 kB
+VmRSS:	   59812 kB
+RssAnon:	   13992 kB
+RssFile:	   35120 kB
+RssShmem:	   10700 kB
+VmData:	   70484 kB
+VmStk:	     148 kB
+VmExe:	    1620 kB
+VmLib:	   77488 kB
+VmPTE:	     792 kB
+VmPMD:	      16 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	5
+SigQ:	0/30853
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001000
+SigCgt:	0000000180000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	144
+nonvoluntary_ctxt_switches:	74
+duc@duc-Blade-Stealth:~$ 
+duc@duc-Blade-Stealth:~$ kill -STOP $pid
+
+[1]+  Stopped                 nautilus
+duc@duc-Blade-Stealth:~$ kill -CONT $pid
+duc@duc-Blade-Stealth:~$ kill -KILL $pid
+
