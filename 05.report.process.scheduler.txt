@@ -1,0 +1,8 @@
+duc@duc-Blade-Stealth:~$ cat /proc/sched_debug | awk '$1 == "systemd" { print $2 }'
+1
+756
+duc@duc-Blade-Stealth:~$ cat /proc/1/sched | grep switches
+nr_switches                                  :                16990
+nr_voluntary_switches                        :                16664
+nr_involuntary_switches                      :                  326
+
