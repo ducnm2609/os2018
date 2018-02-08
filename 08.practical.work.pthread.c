@@ -67,11 +67,6 @@ void *threadFunction2(void *param) {
 	display(*consume());
 }
 
-int pthread_create(
-	pthread_t *thread,
-	const pthread_attr_t *attr,
-	void *(*start_routine) (void *),
-	void *arg);
 
 int main() {
 	pthread_t tid1;
